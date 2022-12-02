@@ -1,0 +1,18 @@
+<section class="tasks">
+  <h1>Adicionar nova tarefas</h1>
+  <div class="tasks-content">
+    <div class="tasks-container">
+      <form action="/tasks/add" method="POST">
+        <div class="input-area">
+          <label for="title">Nome</label>
+          <input type="text" name="title" id="title" required />
+        </div>
+        <div class="input-area">
+          <label for="description">Detalhes da tarefa</label>
+          <textarea name="description" id="description" required></textarea>
+        </div>
+        <input class="button" type="submit" value="Cadastrar" />
+      </form>
+    </div>
+  </div>
+</section>

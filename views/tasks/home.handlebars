@@ -1,0 +1,23 @@
+<section class="tasks">
+  <h1>Lista de tarefas</h1>
+  <div class="tasks-content">
+    <div class="tasks-container">
+      {{#each tasks}}
+        <div class="tasks-list">
+          <p>{{this.title}}</p>
+          <div class="tasks-icon">
+            <form action="/tasks/remove" method="POST">
+              <button>
+                <input type="hidden" name="id" value="{{this.id}}" />
+                <img src="/img/icon1.svg" alt="excluir" />
+              </button>
+            </form>
+            <a href="/tasks/details/{{this.id}}">
+              <img src="/img/icon2.svg" alt="info" />
+            </a>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<section class="tasks">
+  <h1>Edita tarefa</h1>
+  <div class="tasks-content">
+    <div class="tasks-container">
+      <form action="/tasks/edit" method="POST">
+        <div class="input-area">
+          <label for="title">Nome</label>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            required
+            value="{{task.title}}"
+          />
+        </div>
+        <div class="input-area">
+          <label for="description">Detalhes da tarefa</label>
+          <textarea
+            name="description"
+            id="description"
+            required
+          >{{task.description}}</textarea>
+        </div>
+        <input type="hidden" name="id" value="{{task.id}}" />
+        <input class="button" type="submit" value="Editar" />
+      </form>
+    </div>
+  </div>
+</section>
